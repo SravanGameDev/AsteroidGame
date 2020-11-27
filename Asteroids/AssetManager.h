@@ -2,6 +2,7 @@
 #define ASSETMANAGER_H_INCLUDED
 
 #include <string>
+#include <map>
 
 template <typename ASSET>
 class AssetManager

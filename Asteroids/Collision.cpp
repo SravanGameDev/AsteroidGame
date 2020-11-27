@@ -70,6 +70,7 @@ void Collision::DoCollisions(Game *game) const
 			if (CollisionTest(colliderA, colliderB))
 			{
 				game->DoCollision(colliderA->entity, colliderB->entity);
+				return;
 			}
 		}
 	}

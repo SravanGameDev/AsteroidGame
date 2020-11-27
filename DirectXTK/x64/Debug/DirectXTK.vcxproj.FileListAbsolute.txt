@@ -1,0 +1,2 @@
+C:\Projects\AsteroidGame\x64\Debug\DirectXTK.pdb
+C:\Projects\AsteroidGame\DirectXTK\x64\Debug\DirectXTK.pdb
