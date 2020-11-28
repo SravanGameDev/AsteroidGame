@@ -1,5 +1,2 @@
-﻿  pch.cpp
-  BinaryReader.cpp
-  SpriteFont.cpp
-  Generating Code...
+﻿  BinaryReader.cpp
   DirectXTK.vcxproj -> C:\Projects\AsteroidGame\x64\Debug\DirectXTK.lib
