@@ -9,15 +9,15 @@ LevelStart::LevelStart() :
 	level_(0),
 	delay_(0),
 	score_(0)
-
 {
+
 }
 
 void LevelStart::OnActivate(System *system, StateArgumentMap &args)
 {
 	level_ = args["Level"].asInt;
 	delay_ = 120;
-	score_ = args["Score"].asInt;
+	score_ = args["High Score"].asInt;
 }
 
 void LevelStart::OnUpdate(System *system)
@@ -26,7 +26,7 @@ void LevelStart::OnUpdate(System *system)
 	{
 		GameState::StateArgumentMap args;
 		args["Level"].asInt = level_;
-		args["Score"].asInt = score_;
+		args["High Score"].asInt = score_;
 		system->SetNextState("PlayingState", args);
 	}
 }
@@ -46,7 +46,7 @@ void LevelStart::OnRender(System *system)
 	fontEngine->DrawText(levelStartText, textX, textY, 0xff00ffff, FontEngine::FONT_TYPE_LARGE);
 
 	char scoreText[256];
-	sprintf_s(scoreText, "Score: %d", score_);
+	sprintf_s(scoreText, "High Score: %d", score_);
 	int scoreWidth = fontEngine->CalculateTextWidth(scoreText, FontEngine::FONT_TYPE_SMALL);
 	int scoreX = (800 - scoreWidth) / 20;
 	int scoreY = (600 - 48) / 20;
