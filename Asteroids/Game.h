@@ -62,6 +62,8 @@ private:
 
 	void UpdateCollisions();
 
+
+
 	OrthoCamera *camera_;
 
 	Background *background_;

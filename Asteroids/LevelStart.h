@@ -16,7 +16,6 @@ public:
 private:
 	int level_;
 	int delay_;
-	int score_;
 };
 
 #endif // LEVELSTART_H_INCLUDE

@@ -1,2 +1,4 @@
-﻿  LevelStart.cpp
+﻿  BootState.cpp
+  StateLibrary.cpp
+  Generating Code...
   Asteroids.vcxproj -> C:\Projects\AsteroidGame\x64\Debug\Asteroids.exe

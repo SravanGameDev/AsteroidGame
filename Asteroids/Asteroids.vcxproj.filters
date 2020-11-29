@@ -126,6 +126,9 @@
     <ClCompile Include="FontEngine.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Score.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainWindow.h">
@@ -236,6 +239,9 @@
     </ClInclude>
     <ClInclude Include="FontEngine.h">
       <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Score.h">
+      <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

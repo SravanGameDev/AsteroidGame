@@ -6,7 +6,8 @@
 #include "AssetLoader.h"
 
 BootState::BootState() :
-	state_(STATE_BEGIN)
+	fakeDelay_(0),
+	state_(State::STATE_BEGIN)
 {
 }
 
@@ -24,12 +25,12 @@ void BootState::OnUpdate(System *system)
 {
 	switch (state_)
 	{
-	case STATE_BEGIN: UpdateBegin(system); break;
-	case STATE_LOADING_FONTS: UpdateLoadingFonts(system); break;
-	case STATE_LOADING_MODELS: UpdateLoadingModels(system); break;
-	case STATE_LOADING_TEXTURES: UpdateLoadingTextures(system); break;
-	case STATE_LOADING_SOUNDS: UpdateLoadingSounds(system); break;
-	case STATE_END: UpdateEnd(system); break;
+	case State::STATE_BEGIN: UpdateBegin(system); break;
+	case State::STATE_LOADING_FONTS: UpdateLoadingFonts(system); break;
+	case State::STATE_LOADING_MODELS: UpdateLoadingModels(system); break;
+	case State::STATE_LOADING_TEXTURES: UpdateLoadingTextures(system); break;
+	case State::STATE_LOADING_SOUNDS: UpdateLoadingSounds(system); break;
+	case State::STATE_END: UpdateEnd(system); break;
 	}
 }
 
@@ -56,7 +57,7 @@ void BootState::UpdateBegin(System *system)
 		return;
 
 	strings_.push_back("Loading fonts...");
-	state_ = STATE_LOADING_FONTS;
+	state_ = State:: STATE_LOADING_FONTS;
 	fakeDelay_ = 10;
 }
 
@@ -66,7 +67,7 @@ void BootState::UpdateLoadingFonts(System *system)
 		return;
 
 	strings_.push_back("Loading models...");
-	state_ = STATE_LOADING_MODELS;
+	state_ = State:: STATE_LOADING_MODELS;
 	fakeDelay_ = 10;
 }
 
@@ -76,7 +77,7 @@ void BootState::UpdateLoadingModels(System *system)
 		return;
 
 	strings_.push_back("Loading textures...");
-	state_ = STATE_LOADING_TEXTURES;
+	state_ = State::STATE_LOADING_TEXTURES;
 	fakeDelay_ = 10;
 }
 
@@ -86,7 +87,7 @@ void BootState::UpdateLoadingTextures(System *system)
 		return;
 
 	strings_.push_back("Loading sounds...");
-	state_ = STATE_LOADING_SOUNDS;
+	state_ = State::STATE_LOADING_SOUNDS;
 	fakeDelay_ = 10;
 }
 
@@ -96,7 +97,7 @@ void BootState::UpdateLoadingSounds(System *system)
 		return;
 
 	strings_.push_back("FINISHED!");
-	state_ = STATE_END;
+	state_ = State::STATE_END;
 	fakeDelay_ = 10;
 }
 

@@ -21,7 +21,7 @@ public:
 
 private:
 
-	enum State
+	enum class State
 	{
 		STATE_BEGIN,
 		STATE_LOADING_FONTS,
@@ -30,6 +30,8 @@ private:
 		STATE_LOADING_SOUNDS,
 		STATE_END,
 	};
+
+	State state_;
 
 	typedef std::list<std::string> StringList;
 
@@ -44,7 +46,6 @@ private:
 		AssetLoader *loader,
 		Graphics *graphics);
 
-	State state_;
 	StringList strings_;
 
 	int fakeDelay_;

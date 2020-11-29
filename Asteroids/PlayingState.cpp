@@ -2,7 +2,7 @@
 #include "System.h"
 #include "Game.h"
 
-PlayingState::PlayingState()
+PlayingState::PlayingState():level_(0)
 {
 }
 
