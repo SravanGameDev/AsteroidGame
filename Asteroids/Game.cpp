@@ -9,6 +9,7 @@
 #include "Random.h"
 #include "Maths.h"
 #include "Bullet.h"
+#include "Score.h"
 #include "Collision.h"
 #include <algorithm>
 
@@ -17,7 +18,8 @@ Game::Game() :
 	background_(0),
 	player_(0),
 	collision_(0),
-	bullet_(0)
+	bullet_(0),
+	score_(0)
 {
 	camera_ = new OrthoCamera();
 	camera_->SetPosition(XMFLOAT3(0.0f, 0.0f, 0.0f));
@@ -56,6 +58,7 @@ void Game::RenderEverything(Graphics *graphics)
 	camera_->SetAsView(graphics);
 
 	background_->Render(graphics);
+
 
 	if (player_)
 	{

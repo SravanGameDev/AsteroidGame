@@ -3,26 +3,21 @@
 
 #include <string>
 
-#include "GameState.h"
+#include "GameEntity.h"
 
 using namespace std;
 
-class Score:public GameState
+class Score: GameEntity
 {
 public:
 	Score();
 	~Score();
 
-	int score_;
-	string player;
+	int playerScore_;
 
-	int highScore_;
-	string players;
+	void Update(System* system);
+	void Render(Graphics* graphics) const;
 
-	void OnActivate(System* system, StateArgumentMap& args);
-	void OnUpdate(System* system);
-	void OnRender(System* system);
-	void OnDeactivate(System* system);
 
 private:
 

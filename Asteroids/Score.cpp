@@ -5,33 +5,23 @@
 #include "Game.h"
 #include "Keyboard.h"
 
-Score::Score() :score_(0), highScore_(0) {}
-
-Score::~Score(){}
-
-
-void Score::OnActivate(System* system, StateArgumentMap& args)
+Score::Score() :playerScore_(0)
 {
-	score_ = args["Score"].asInt;
 
 }
 
-void Score::OnUpdate(System* system)
+Score::~Score()
 {
-	
+
 }
 
-void Score::OnRender(System* system)
+void Score::Render(Graphics* graphics) const
 {
-	Graphics* graphics = system->GetGraphics();
-	FontEngine* fontEngine = graphics->GetFontEngine();
-
-	system->GetGame()->RenderBackgroundOnly(graphics);
-	
-
-	fontEngine->DrawText("Score", 50, 50, 0xff00ffff, FontEngine::FONT_TYPE_LARGE);
+	FontEngine *fontEngine = graphics->GetFontEngine();
+	fontEngine->DrawTextA("Score: ", 400, 200, 0xffffffff, FontEngine::FONT_TYPE_LARGE);
 }
 
-void Score::OnDeactivate(System* system)
+void Score::Update(System* system)
 {
+
 }
