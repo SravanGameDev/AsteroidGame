@@ -19,6 +19,9 @@ public:
 	void Render(Graphics* graphics) const;
 
 
+	void ResetScore();
+	void HighScore(int playerScore_);
+
 private:
 
 };

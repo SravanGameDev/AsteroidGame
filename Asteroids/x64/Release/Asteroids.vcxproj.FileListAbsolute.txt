@@ -1,0 +1,4 @@
+D:\MyPractice\AsteroidGame\x64\Release\PixelShader_FvfXyzDiffuse.cso
+D:\MyPractice\AsteroidGame\x64\Release\PixelShader_SpriteFont.cso
+D:\MyPractice\AsteroidGame\x64\Release\VertexShader_FvfXyzDiffuse.cso
+D:\MyPractice\AsteroidGame\x64\Release\VertexShader_SpriteFont.cso

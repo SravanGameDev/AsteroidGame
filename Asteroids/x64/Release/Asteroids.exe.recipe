@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Release\Asteroids.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Release\PixelShader_FvfXyzDiffuse.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Release\PixelShader_SpriteFont.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Release\VertexShader_FvfXyzDiffuse.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Release\VertexShader_SpriteFont.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>
