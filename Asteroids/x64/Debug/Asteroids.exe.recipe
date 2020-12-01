@@ -2,21 +2,21 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Projects\AsteroidGame\x64\Debug\Asteroids.exe</FullPath>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Debug\Asteroids.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Projects\AsteroidGame\x64\Debug\PixelShader_FvfXyzDiffuse.cso</FullPath>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Debug\PixelShader_FvfXyzDiffuse.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Projects\AsteroidGame\x64\Debug\PixelShader_SpriteFont.cso</FullPath>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Debug\PixelShader_SpriteFont.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Projects\AsteroidGame\x64\Debug\VertexShader_FvfXyzDiffuse.cso</FullPath>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Debug\VertexShader_FvfXyzDiffuse.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Projects\AsteroidGame\x64\Debug\VertexShader_SpriteFont.cso</FullPath>
+      <FullPath>D:\MyPractice\AsteroidGame\x64\Debug\VertexShader_SpriteFont.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

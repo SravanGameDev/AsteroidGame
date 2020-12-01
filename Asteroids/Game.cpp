@@ -26,6 +26,7 @@ Game::Game() :
 	camera_->SetFrustum(800.0f, 600.0f, -100.0f, 100.0f);
 	background_ = new Background(800.0f, 600.0f);
 	collision_ = new Collision();
+	score_ = new Score();
 }
 
 Game::~Game()
@@ -37,6 +38,7 @@ Game::~Game()
 	DeleteAllAsteroids();
 	DeleteAllExplosions();
 	delete collision_;
+	delete score_;
 }
 
 void Game::Update(System *system)
@@ -56,8 +58,8 @@ void Game::RenderBackgroundOnly(Graphics *graphics)
 void Game::RenderEverything(Graphics *graphics)
 {
 	camera_->SetAsView(graphics);
-
 	background_->Render(graphics);
+	score_->Render(graphics);
 
 
 	if (player_)
@@ -136,6 +138,7 @@ void Game::DeletePlayer()
 {
 	delete player_;
 	player_ = 0;
+	score_->playerScore_ = 0;
 }
 
 void Game::UpdatePlayer(System *system)
@@ -290,6 +293,7 @@ void Game::AsteroidHit(Asteroid *asteroid)
 		SpawnAsteroidAt(position, smallerSize);
 	}
 	DeleteAsteroid(asteroid);
+	score_->playerScore_++;
 }
 
 void Game::DeleteAsteroid(Asteroid *asteroid)
