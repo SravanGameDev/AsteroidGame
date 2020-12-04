@@ -9,7 +9,7 @@
 #include "Random.h"
 #include "Maths.h"
 #include "Bullet.h"
-#include "Score.h"
+#include "UserInterface.h"
 #include "Collision.h"
 #include <algorithm>
 
@@ -19,14 +19,14 @@ Game::Game() :
 	player_(0),
 	collision_(0),
 	bullet_(0),
-	score_(0)
+	userInterface(0)
 {
 	camera_ = new OrthoCamera();
 	camera_->SetPosition(XMFLOAT3(0.0f, 0.0f, 0.0f));
 	camera_->SetFrustum(800.0f, 600.0f, -100.0f, 100.0f);
-	background_ = new Background(800.0f, 600.0f);
+	background_ = new Background(800.0f, 600.0f); //Resolution
 	collision_ = new Collision();
-	score_ = new Score();
+	userInterface = new UserInterface();
 }
 
 Game::~Game()
@@ -38,7 +38,7 @@ Game::~Game()
 	DeleteAllAsteroids();
 	DeleteAllExplosions();
 	delete collision_;
-	delete score_;
+	delete userInterface; 
 }
 
 void Game::Update(System *system)
@@ -59,7 +59,7 @@ void Game::RenderEverything(Graphics *graphics)
 {
 	camera_->SetAsView(graphics);
 	background_->Render(graphics);
-	score_->Render(graphics);
+	userInterface->Render(graphics);
 
 
 	if (player_)
@@ -138,7 +138,7 @@ void Game::DeletePlayer()
 {
 	delete player_;
 	player_ = 0;
-	score_->playerScore_ = 0;
+	userInterface->ResetScore();
 }
 
 void Game::UpdatePlayer(System *system)
@@ -293,7 +293,7 @@ void Game::AsteroidHit(Asteroid *asteroid)
 		SpawnAsteroidAt(position, smallerSize);
 	}
 	DeleteAsteroid(asteroid);
-	score_->playerScore_++;
+	userInterface->UpdateScore();
 }
 
 void Game::DeleteAsteroid(Asteroid *asteroid)

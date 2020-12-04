@@ -13,7 +13,7 @@ class Bullet;
 class Asteroid;
 class Explosion;
 class Collision;
-class Score;
+class UserInterface;
 class System;
 class Graphics;
 class GameEntity;
@@ -74,7 +74,8 @@ private:
 	ExplosionList explosions_;
 
 	Collision *collision_;
-	Score *score_;
+	UserInterface *userInterface;
+
 };
 
 #endif // GAME_H_INCLUDED

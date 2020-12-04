@@ -126,7 +126,7 @@
     <ClCompile Include="FontEngine.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="Score.cpp">
+    <ClCompile Include="UserInterface.cpp">
       <Filter>Game</Filter>
     </ClCompile>
   </ItemGroup>
@@ -240,7 +240,7 @@
     <ClInclude Include="FontEngine.h">
       <Filter>Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="Score.h">
+    <ClInclude Include="UserInterface.h">
       <Filter>Game</Filter>
     </ClInclude>
   </ItemGroup>
